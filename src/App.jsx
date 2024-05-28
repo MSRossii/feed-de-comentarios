@@ -3,6 +3,7 @@ import { useState } from "react";
 export default function App() {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
+  const [comments, setComments] = useState([]);
 
   const handleSubmit = (ev) => {
     ev.preventDefault();
@@ -14,7 +15,7 @@ export default function App() {
       createdAt: new Date(),
     };
 
-    console.log(newComment);
+    setComments((state) => [newComment, ...state]);
     setAuthor("");
     setContent("");
   };
