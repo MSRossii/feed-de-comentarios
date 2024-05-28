@@ -17,7 +17,14 @@ export default function App() {
           onChange={(ev) => setAuthor(ev.target.value)}
         />
         <label htmlFor="content">Comentário</label>
-        <textarea id="content" cols="30" rows="6"></textarea>
+        <textarea
+          id="content"
+          cols="30"
+          rows="6"
+          required
+          value={content}
+          onChange={(ev) => setContent(ev.target.value)}
+        ></textarea>
         <button type="submit">Enviar comentário</button>
       </form>
 
