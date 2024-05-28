@@ -4,12 +4,23 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
+body {
+  background-color: rgb(11, 46, 99);
+}
+
 #app {
   background-color: #eaeaea;
   border-radius: 0.25rem;
   margin: 2rem auto;
   padding: 2rem 4rem;
   max-width: 32rem;
+  margin-top: 6rem;
+}
+
+.title {
+  text-align: center;
+  font-size: 25px;
+  margin: 0 0 30px;
 }
 
 label {
