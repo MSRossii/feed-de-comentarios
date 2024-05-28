@@ -4,6 +4,21 @@ export default function App() {
   const [author, setAuthor] = useState("");
   const [content, setContent] = useState("");
 
+  const handleSubmit = (ev) => {
+    ev.preventDefault();
+
+    const newComment = {
+      id: Math.floor(Math.random() * 100000),
+      author: author,
+      content: content,
+      createdAt: new Date(),
+    };
+
+    console.log(newComment);
+    setAuthor("");
+    setContent("");
+  };
+
   return (
     <div id="app">
       <h2>Feed de comentários</h2>
