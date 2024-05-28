@@ -22,7 +22,7 @@ export default function App() {
   return (
     <div id="app">
       <h2>Feed de comentários</h2>
-      <form>
+      <form onSubmit={handleSubmit}>
         <label htmlFor="author">Email</label>
         <input
           type="email"
