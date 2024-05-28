@@ -9,6 +9,16 @@ export default function App() {
         <textarea id="content" cols="30" rows="6"></textarea>
         <button type="submit">Enviar comentário</button>
       </form>
+
+      <hr />
+
+      <section id="comments">
+        <div>
+          <h3>author@email.com</h3>
+          <span>Em 01/01/2001</span>
+          <p>Comentário de exemplo...</p>
+        </div>
+      </section>
     </div>
   );
 }
