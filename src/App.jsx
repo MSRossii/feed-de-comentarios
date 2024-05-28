@@ -47,11 +47,17 @@ export default function App() {
       <hr />
 
       <section id="comments">
-        <div>
-          <h3>author@email.com</h3>
-          <span>Em 01/01/2001</span>
-          <p>Comentário de exemplo...</p>
-        </div>
+        {comments.length > 0 ? (
+          comments.map((comment) => (
+            <div key={comment.id}>
+              <h3>{comment.author}</h3>
+              <span>Em {comment.createdAt.toLocaleString()}</span>
+              <p>{comment.content}</p>
+            </div>
+          ))
+        ) : (
+          <p>Seja o primeiro a comentar!</p>
+        )}
       </section>
     </div>
   );
